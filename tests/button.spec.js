@@ -6,6 +6,6 @@
     await page.goto(filePath);
     await page.click('#reveal-btn');
     const message = await page.locator('#message');
-    //await expect(message).toHaveText('Hello from CircleCI!');
-    await expect(message).toHaveText('This text does not exist');
+    await expect(message).toHaveText('Hello from CircleCI!');
+    //await expect(message).toHaveText('This text does not exist');
   });
