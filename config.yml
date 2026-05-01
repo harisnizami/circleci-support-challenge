@@ -1,0 +1,22 @@
+version: 2.1
+
+jobs:
+  test:
+    docker:
+      - image: mcr.microsoft.com/playwright:v1.40.0-jammy
+    steps:
+      - checkout
+      - run:
+          name: Install dependencies
+          command: npm install
+      - run:
+          name: Install Playwright browsers
+          command: npx playwright install --with-deps chromium
+      - run:
+          name: Run tests
+          command: npx playwright test
+
+workflows:
+  build-and-test:
+    jobs:
+      - test

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hello CircleCI</title>
+  <style>
+    body {
+      font-family: monospace;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+      margin: 0;
+      background: #0f0f0f;
+      color: #f0f0f0;
+    }
+    h1 { font-size: 1.5rem; margin-bottom: 2rem; }
+    button {
+      padding: 12px 24px;
+      font-size: 1rem;
+      font-family: monospace;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover { background: #45a049; }
+    #message {
+      margin-top: 1.5rem;
+      font-size: 1.2rem;
+      min-height: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>CircleCI Support Challenge</h1>
+  <button id="reveal-btn" onclick="showMessage()">Click me</button>
+  <p id="message"></p>
+  <script>
+    function showMessage() {
+      document.getElementById('message').textContent = 'Hello from CircleCI!';
+    }
+  </script>
+</body>
+</html>
